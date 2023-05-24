@@ -1,0 +1,38 @@
+1. How Angular works?
+2. How data is load from DB to Button?
+3. How to retrieve DB data into js , ts , html file
+4. ES6 overview
+5. How to specify how much page size is required for component
+6. Scenario : Complicate bug reported by customer what should u do
+7. Junit testcase framework
+8. GitHub , Azure 
+9. IsPAlidrome
+10. Filter food list by names 
+
+
+class Food {
+	String name;
+	String type;
+	public Food (String name, String type) {
+		this.name = name;
+		this.type = type;
+	}
+	public static void main(String[] args) {	
+		printFruits();
+	}
+	public static void printFruits() {
+		List<Food> foodList = new ArrayList<>();
+		foodList.add(new Food("Banana", "fruit"));
+		foodList.add(new Food("Squash", "vegetable"));
+		foodList.add(new Food("Apple", "fruit"));
+		foodList.add(new Food("Cake", "dessert"));
+		foodList.add(new Food("Broccoli", "vegetable"));
+		foodList.add(new Food("Pie", "dessert"));
+		foodList.add(new Food("Carrot", "vegetable"));
+		foodList.add(new Food("Kiwi", "fruit"));
+
+		// Print comma-delimited string of fruit names to System.out in alphabetical ord
+		List <String> res = foodList.stream().filter(e -> e.type.equals("fruit")).map(e -> e.name).sorted().collect(Collectors.toList());
+		System.out.println(res);
+	}
+}
