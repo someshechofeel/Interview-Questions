@@ -36,3 +36,9 @@ class Food {
 		System.out.println(res);
 	}
 }
+
+1.Difference between Statement and Prepared Statements?
+2.Triggers 
+3.Procedures
+4.DB related questions
+5.how you can access db into the java application withoute ORM i.e JPA / hibernate?
